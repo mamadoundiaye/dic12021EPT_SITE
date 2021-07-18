@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    li a {
+        text-decoration:none ; color : black ;
+        font-weight :bold  ;
+    }
+    li a:hover {
+        color : rgb(225,145,50) ;
+    }
+    li a:active {
+        color : rgb(225,145,50) ;
+    }
+    .btn-outline-warning:hover {
+      background-color : rgb(225,145,50) ;
+      color : white ;
+    }
+    .dropdown-menu {
+      background-color : rgb(225,145,50) ;
+
+    }
+    .dropdown-menu a{
+      color : white ;
+    }
+    .dropdown-menu a:hover{
+      background-color : white ;
+    }
+
+
+
+
+    </style>
+  </head>
+  <body>
+
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3  border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <img src="{% static 'images/ept_logoHAUT.svg' %}" height="50" alt="logoEPT">
+        </a>
+
+        <ul class="nav col-12 col-md-auto     mb-2 justify-content-center mb-md-0">
+          <li><a href="#"  class="nav-link px-2 link-secondary">Accueil</a></li>
+          <li>
+            <a class="nav-link dropdown-toggle" style="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Departements
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" style="text-decoration:none " href="#">Genie Informatique-Telecoms</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" style="text-decoration:none" href="#">Genie Civil</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" style="text-decoration:none" href="#">Genie Electromecanique</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" style="text-decoration:none" href="#">Genie Aeronautique</a>
+
+            </div>
+          <li>
+          <li><a href="#"  class="nav-link px-2 link-dark">Administration</a></li>
+          <li><a href="#"  class="nav-link px-2 link-dark">Contacts</a></li>
+          <li><a href="#"  class="nav-link px-2 link-dark">A propos</a></li>
+        </ul>
+
+        <div class="col-md-3 text-end">
+          <button type="button" style="background-color : rgb(225,145,50)  ;color:white;" href="#myModal" data-toggle="modal"class="btn trigger-btn  btn-warning ml-5 mr-2">Connexion</button>
+          <button type="button"  class="btn btn-outline-warning">Inscription</button>
+        </div>
+      </header>
+
+
+
+
+  </body>
+
+</html>
