@@ -8,7 +8,7 @@ from admin_interface.models import Theme #pour unregister(Theme)
 
 #enlever l'affichage de la date de naissance
 class EtudiantA(admin.ModelAdmin):
-    exclude = ('date_de_naissance', )
+    #exclude = ('date_de_naissance', )
     list_display = ('prenom', 'nom' , 'date_dinscription')
     list_filter = ('date_dinscription', )
     list_per_page=10
@@ -32,7 +32,7 @@ admin.site.register(Matiere , MatiereA)
 
 #unregister Group , User , Theme
 admin.site.unregister(Group)
-admin.site.unregister(User)
+#admin.site.unregister(User)
 admin.site.unregister(Theme)
 
 #PERSONNALISATION
