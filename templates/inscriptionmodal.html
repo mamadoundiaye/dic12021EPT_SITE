@@ -1,13 +1,78 @@
+{% load static %}
 {% block content %}
-    <center>
-    <h1 class="display-3" style="background-color:#000000;color:#FFFF99;">Inscription</h1>
-    <form method = 'POST' enctype="multipart/form-data">
-        {% csrf_token %}
-        <table class = 'w-50 table table-light' style="border-radius:10px;background-color:#FFFF99;">
-            {{upload_form.username }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title> Login Modal Form</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<style>
+body {
+	font-family: 'Varela Round', sans-serif;
+}
 
-        </table>
-        <button type="submit" class="btn btn-lg btn-warning">Submit</button>
-    </form>
-</center>
+</style>
+</head>
+<body>
+<!-- Modal HTML -->
+<div id="myModal2" class="modal fade">
+	<div class="modal-dialog modal-lg modal-login">
+		<div class="modal-content">
+			<form  method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+				<div class="modal-header">
+					<h4 class="modal-title">Créer un compte utilisateur</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group" style="border-color: rgb(225,145,50)">
+            <div class="container " style="border:none">
+              <div class="row">
+                <div class="col-4">
+                  <label>Prenom et nom</label><br>
+      						{{inscription.prenom }}<br><br>
+                  {{inscription.nom }}<br><br><br>
+                  <label>Addresse mail</label><br>
+                  {{inscription.mail }}<br><br>
+                  <label>Départements</label><br>
+                  {{inscription.departement }}
+                </div>
+                <div class="col-4">
+                  <br><br><br><br><br><br><br><br><br><br><br>
+                  <label>Classe-Niveau</label><br>
+                  {{inscription.appartient }}
+                </div>
+                <div class="col-4">
+
+                  <label>Date et lieu de naissance</label><br>
+                  {{inscription.date_de_naissance }}<br><br>
+                  {{inscription.lieu_de_naissance }}<br><br><br><br>
+                  <label>Captcha</label><br>
+                  <img src="{% static 'images/captcha.png' %}" height="40" alt="captcha">
+                  <br><br>
+                  <input type="text" name="" value="">
+                </div>
+
+              </div>
+
+
+
+            </div>
+
+					</div>
+					<div class="form-group" style="border-color: rgb(225,145,50)">
+            <label class="form-check-label" ><input type="checkbox"> Se souvenir de moi <a href="#" class="float-right text-muted" ><small style="color : rgb(225,145,50);">Mot de pass oublié ?</small></a></label>
+
+					</div>
+				</div>
+				<div class="modal-footer justify-content-between">
+					<input type="submit" class="btn " style="color : white ; background-color:rgb(225,145,50)" value="Valider">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
 {% endblock %}

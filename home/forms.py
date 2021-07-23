@@ -8,12 +8,15 @@ from departements.models import Etudiant
 
 #formulaire pour l'inscription d'un eleve
 class ConnexionForm(forms.ModelForm):
+
     class Meta:
         model = User
         fields = ['username', 'password']
 
 
+
 class InscriptionForm(forms.ModelForm):
     class Meta:
+        
         model = Etudiant
-        fields = '__all__'
+        fields = ['prenom', 'nom','mail','departement','appartient','date_de_naissance','lieu_de_naissance']

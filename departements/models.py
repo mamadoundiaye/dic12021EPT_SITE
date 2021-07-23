@@ -10,8 +10,8 @@ from django.db import models
 class Utilisateur(models.Model):
     class Meta:
         ordering = ('nom',)
-    prenom = models.TextField(max_length=100)
-    nom = models.TextField(max_length=100)
+    prenom = models.CharField(max_length = 200)
+    nom = models.CharField(max_length = 200)
     mail = models.EmailField(max_length=100 , primary_key=True)
     def __str__(self):
         return self.prenom
@@ -43,9 +43,12 @@ class Etudiant(Utilisateur):
 
     date_de_naissance = models.DateField(null=True)
     date_dinscription = models.DateField()
-    lieu_de_naissance = models.TextField(max_length=100)
+    lieu_de_naissance = models.CharField(max_length = 200)
+
 
     appartient = models.ManyToManyField('Classe')
+    departement = models.ManyToManyField('Departement',default='GIT')
+
 
 class Professeur(Utilisateur):
     class Meta:
