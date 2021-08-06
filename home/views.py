@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from home.forms import ConnexionForm , InscriptionForm
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
+from departements.models import Etudiant
 
 # Create your views here.
 def home(request):
@@ -36,3 +37,50 @@ def upload(request):
 def sign_out(request): #my logout view
     request.session.flush()
     return redirect("/")
+
+def contacts(request): #my logout view
+    upload = ConnexionForm()
+    inscription = InscriptionForm()
+    if request.method == 'POST':
+        inscription = InscriptionForm(request.POST, request.FILES)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None and user.is_active:
+            login(request, user)
+            request.session['name'] = username
+            request.session['password'] = password
+            return redirect("/")
+        else:
+            return HttpResponse("""identifiants incorrects recharger la page ? <a href = "">reload</a>""")
+        if inscription.is_valid():
+            inscription.save()
+            return HttpResponse("reussite")
+        else:
+            return HttpResponse("echec")
+    else:
+            return render(request, "contacts.html" , {'upload_form':upload })
+
+def departement_GIT(request): #my logout view
+    liste_git = Etudiant.objects.filter(departement='GIT')
+    upload = ConnexionForm()
+    inscription = InscriptionForm()
+    if request.method == 'POST':
+        inscription = InscriptionForm(request.POST, request.FILES)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None and user.is_active:
+            login(request, user)
+            request.session['name'] = username
+            request.session['password'] = password
+            return redirect("/")
+        else:
+            return HttpResponse("""identifiants incorrects recharger la page ? <a href = "">reload</a>""")
+        if inscription.is_valid():
+            inscription.save()
+            return HttpResponse("reussite")
+        else:
+            return HttpResponse("echec")
+    else:
+        return render(request, "departement_GIT.html" , {'liste_git':liste_git , 'upload_form':upload })

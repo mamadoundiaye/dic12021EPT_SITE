@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    {% block title %}
+    <title></title>
+    {% endblock title %}
+    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}">
+    <style media="screen">
+    #contacts{
+      color: rgb(225,145,50) ;
+    }
+    </style>
+    <body>
+        <header>
+        {% block extraheader %}
+        {% include "head.html" %}
+        {% endblock extraheader %}
+        </header>
+              <!-- Links -->
+
+              <h5 class=" col-12 text-uppercase mt-2" style="height:2em ; color:white ; background-color:rgb(225,145,50);">Contacts</h5>
+              <br>
+              <div class="col-12">
+              <ul class="list-unstyled ">
+                <li>
+                  <a style="text-decoration:none; color: black ;font-weight :normal;  ;" href="#!">Mail : ept@ept.sn</a>
+                </li>
+                <li>
+                  <a style="text-decoration:none; color: black ;font-weight :normal  ;" href="#!">Postal : BP A10, Thies, Senegal</a>
+                </li>
+                <li>
+                  <a style="text-decoration:none; color: black ;font-weight :normal  ;" href="#!">Telephone : 00221 33 951 15 48</a>
+                </li>
+                <li>
+                  <a style="text-decoration:none; color: black ;font-weight :normal  ;" href="#!">Fax : 00221 33 951 14 76</a>
+                </li>
+              </ul>
+                </div>
+                <br>
+                <h5 class=" col-12 text-uppercase" style="height:2em ; color:white ; background-color:rgb(225,145,50);">Accés</h5>
+                <br>
+                <div class="col-12">
+                <ul class="list-unstyled ">
+                  <li>
+                    <p style="text-decoration:none; color: black ;font-weight :normal;  ;" href="#!">l'EPT est situee dans la region de Thies (environ 70km de Dakar , Senegal ),
+                       sur un terrain de plus de 400 hectares . Son Campus comporte des locaux d'enseignement pedagogiques et de recherche , d'administration , d'exploitation , et d'hebergement a l'usage des etudiants
+                        et d'une partie du personnel
+                    </p>
+                  </li>
+                </ul>
+                  </div>
+                  <br>
+                  <h5 class=" col-12 text-uppercase" style="height:2em ;color:white ; background-color:rgb(225,145,50);">Localisation</h5>
+                <div class="container" style="border:none">
+                  <div class="row">
+
+
+                <div class="mapouter col-8">
+                  <div class="gmap_canvas">
+                    <p>iteneraire EPT dans une vue de plan grace a google maps API     ......</p>
+                    <iframe width="500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=EPT%20thies&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://2piratebay.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:500px;}</style><a href="https://www.embedgooglemap.net">how to embed google maps into html</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:500px;}</style>
+
+                  </div>
+                </div>
+                <div class="col-4">
+                  <p>trouver directement votre itineraire depuis votre adresse jusqu'a l'EPT</p>
+                  <input type="text" placeholder="depart" name="s" id="s"   placeholder="Enter Adress"  data-role="none">
+                  <br><br>
+                  <input type="text" name="s" id="s" placeholder="BP"  placeholder="Enter Adress"  data-role="none">
+                  <br><br>
+                  <button type="submit" style="color:white ; background-color:rgb(225,145,50)" name="button">Rechercher</button>
+                </div>
+                </div>
+              </div>
+            </div>
+
+        {% block loginmodal %}
+        {% include "loginmodal.html" %}
+        {% endblock loginmodal %}
+        {% block inscriptionmodal %}
+        {% include "inscriptionmodal.html" %}
+        {% endblock inscriptionmodal %}
+        {% block footer %}
+        {% include "footer.html" %}
+        {% endblock footer %}
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

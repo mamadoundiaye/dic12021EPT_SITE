@@ -8,13 +8,23 @@
     {% endblock title %}
     <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}">
     <style media="screen">
-      .imgBack{
-        background-image: url("/static/images/ept_background.png");
-        background-size: 100% ;
-        background-attachment: fixed;
-      }
-      #accueil {
+      #departements {
         color : rgb(225,145,50) ;
+      }
+      table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      }
+
+      td, th {
+      border: 1px solid rgb(225,145,50);
+      text-align: left;
+      padding: 8px;
+      }
+
+      tr:nth-child(even) {
+      background-color: rgb(225,145,50);
       }
     </style>
     <body>
@@ -23,27 +33,39 @@
         {% include "head.html" %}
         {% endblock extraheader %}
         </header>
-        <div class="imgBack h-4">
-        <br><br>
-        <div class="ml-4 container" style="border: none ;">
-          <div class="row ">
-            <div class="mr-3">
 
-            <div class="col-md-5" style="color : white">
-              <p style="color : white ; font-size : 300% ; font-weight:bold">Sagesse-Devoir</p>
-              <p style="color : white ; font-size : 125%">
-              L'Ecole Polytechnique de Thies connu sous le sigle EPT est
-              une grande ecole d'ingenieurs implantée au Senegal .Cree en 1973 par
-              Leopold Sedar Senghor , elle forme des ingenieurs dans les domaines du genie civil de l'electromecanique(avec filiere aeronautique)
-              et du genie informatique et telecommunications
-              </p>
-            </div>
-          </div>
-          </div>
-
+        <div style="background-color:rgb(225,145,50); height:2em">
+          <h2 style="color:white">BIENVENUE au departement GIT</h2>
         </div>
+        <div class="">
+          {% if request.user.is_authenticated %}
+          <h2>La liste des eleves en GIT toute classe confondues</h2>
+            <table>
+            <tr>
+            <th>prenom </th>
+            <th>nom</th>
+            <th>email</th>
+            <th>classe</th>
+            <th>date de naissance</th>
+            </tr>
 
+          {% for git in liste_git %}
+          <tr>
+            <td>{{ git.prenom }} </td>
+            <td>{{ git.nom }} </td>
+            <td>{{ git.mail }} </td>
+            {% for classe in git.appartient.all %}
+            <td>{{ classe }}</td>
+            {% endfor %}
+            <td>{{ git.date_de_naissance }} </td>
+          </tr>
+          {% endfor %}
+        </table>
         <br><br>
+          {% else %}
+          <p>veuillez vous connecter pour voir la liste des eleves GIT</p>
+          {% endif %}
+        </div>
 
 
       </div>
