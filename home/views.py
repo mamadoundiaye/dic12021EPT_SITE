@@ -18,9 +18,7 @@ class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
 
 # Create your views here.
 def home(request):
-    # recuperations des informations de la table Personne
-    user_credentials = User.objects.all()
-    return render(request, 'base.html' , {'user_credentials': user_credentials })
+    return render(request, 'base.html')
 
 def upload(request):
     upload = ConnexionForm()
@@ -34,7 +32,7 @@ def upload(request):
             login(request, user)
             request.session['name'] = username
             request.session['password'] = password
-            return redirect("/")
+            return redirect(request.path_info)
         else:
             return HttpResponse("""identifiants incorrects recharger la page ? <a href = "">reload</a>""")
         if inscription.is_valid():
@@ -61,7 +59,7 @@ def contacts(request): #my logout view
             login(request, user)
             request.session['name'] = username
             request.session['password'] = password
-            return redirect("/")
+            return redirect(request.path_info)
         else:
             return HttpResponse("""identifiants incorrects recharger la page ? <a href = "">reload</a>""")
         if inscription.is_valid():
@@ -85,7 +83,7 @@ def departement(request , dep_num): #my logout view
             login(request, user)
             request.session['name'] = username
             request.session['password'] = password
-            return redirect("/")
+            return redirect(request.path_info) #redirect to the current page
         else:
             return HttpResponse("""identifiants incorrects recharger la page ? <a href = "">reload</a>""")
         if inscription.is_valid():
