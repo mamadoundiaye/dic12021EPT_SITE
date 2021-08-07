@@ -35,11 +35,11 @@
         </header>
 
         <div style="background-color:rgb(225,145,50); height:2em">
-          <h2 style="color:white">BIENVENUE au departement GIT</h2>
+          <h2 style="color:white">BIENVENUE au departement {{ nom_departement }}</h2>
         </div>
         <div class="">
           {% if request.user.is_authenticated %}
-          <h2>La liste des eleves en GIT toute classe confondues</h2>
+          <h2>La liste des eleves en {{ nom_departement }} toute classe confondues</h2>
             <table>
             <tr>
             <th>prenom </th>

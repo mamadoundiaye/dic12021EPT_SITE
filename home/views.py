@@ -72,8 +72,8 @@ def contacts(request): #my logout view
     else:
             return render(request, "contacts.html" , {'upload_form':upload })
 
-def departement_GIT(request): #my logout view
-    liste_git = Etudiant.objects.filter(departement='GIT')
+def departement(request , dep_num): #my logout view
+    liste_git = Etudiant.objects.filter(departement=dep_num)
     upload = ConnexionForm()
     inscription = InscriptionForm()
     if request.method == 'POST':
@@ -94,4 +94,4 @@ def departement_GIT(request): #my logout view
         else:
             return HttpResponse("echec")
     else:
-        return render(request, "departement_GIT.html" , {'liste_git':liste_git , 'upload_form':upload })
+        return render(request, "departement_GIT.html" , {'liste_git':liste_git , 'upload_form':upload ,'nom_departement':dep_num })
