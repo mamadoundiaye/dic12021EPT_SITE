@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'departements'
+    'departements',
+    'rest_framework',
 ]
 X_FRAME_OPTIONS='SAMEORIGIN' # only if django version >= 3.0
 

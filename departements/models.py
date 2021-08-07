@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 # ici on utilise la classe User de django qu'on va expandre pour gerer nos utilisateurs
@@ -49,6 +50,19 @@ class Etudiant(Utilisateur):
     appartient = models.ManyToManyField('Classe')
     departement = models.ManyToManyField('Departement',default='GIT')
 
+'''
+class Etudiant2(User):
+    class Meta:
+        pass
+
+    date_de_naissance = models.DateField(null=True)
+    date_dinscription = models.DateField()
+    lieu_de_naissance = models.CharField(max_length = 200)
+
+
+    appartient = models.ManyToManyField('Classe')
+    departement = models.ManyToManyField('Departement',default='GIT')
+'''
 
 class Professeur(Utilisateur):
     class Meta:

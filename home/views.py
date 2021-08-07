@@ -4,6 +4,17 @@ from home.forms import ConnexionForm , InscriptionForm
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from departements.models import Etudiant
+from rest_framework import generics
+from departements.serializers import EtudiantSerializer
+
+
+class API_objects(generics.ListCreateAPIView):
+    queryset = Etudiant.objects.all()
+    serializer_class = EtudiantSerializer
+
+class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Etudiant.objects.all()
+    serializer_class =EtudiantSerializer
 
 # Create your views here.
 def home(request):

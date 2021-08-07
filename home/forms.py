@@ -17,6 +17,6 @@ class ConnexionForm(forms.ModelForm):
 
 class InscriptionForm(forms.ModelForm):
     class Meta:
-        
+
         model = Etudiant
         fields = ['prenom', 'nom','mail','departement','appartient','date_de_naissance','lieu_de_naissance']

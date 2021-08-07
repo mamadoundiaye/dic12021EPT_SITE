@@ -32,7 +32,6 @@ admin.site.register(Matiere , MatiereA)
 
 #unregister Group , User , Theme
 admin.site.unregister(Group)
-#admin.site.unregister(User)
 admin.site.unregister(Theme)
 
 #PERSONNALISATION
