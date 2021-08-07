@@ -17,10 +17,12 @@ class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
     serializer_class =EtudiantSerializer
 
 # Create your views here.
-def home(request):
-    return render(request, 'base.html')
 
-def upload(request):
+def firstvisit(request):
+    sign_out(request)
+    return redirect("homepage")
+
+def home(request):
     upload = ConnexionForm()
     inscription = InscriptionForm()
     if request.method == 'POST':
@@ -45,7 +47,7 @@ def upload(request):
 
 def sign_out(request): #my logout view
     request.session.flush()
-    return redirect("/")
+    return redirect("homepage")
 
 def contacts(request): #my logout view
     upload = ConnexionForm()
