@@ -1,7 +1,10 @@
 {% load static %}
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
@@ -53,9 +56,9 @@
 
 
         <ul class="nav col-12 col-md-auto   mb-2 justify-content-center mb-md-0">
-          <li><a href="/" id="accueil" class="nav-link px-2 link-secondary">Accueil</a></li>
+          <li><a href="home" id="accueil" class="nav-link px-2 link-secondary">Accueil</a></li>
           <li>
-            <a class="nav-link dropdown-toggle" id="departements" style="" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" id="departements"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Departements
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -68,10 +71,28 @@
               <a class="dropdown-item" style="text-decoration:none" href="/departement/AERO">Genie Aeronautique</a>
 
             </div>
-          <li>
+          </li>
           <li><a href="/admin" id="administration" class="nav-link px-2 link-dark">Administration</a></li>
           <li><a href="/contacts" id="contacts"  class="nav-link px-2 link-dark">Contacts</a></li>
           <li><a href="#" id="a propos"  class="nav-link px-2 link-dark">A propos</a></li>
+          <li>
+            <a class="nav-link dropdown-toggle border-left border-right border-warning" id="departements"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="https://cdn.icon-icons.com/icons2/1222/PNG/512/1492616968-18-google-translate-text-language-translation_83413.png" height="30" alt="langue">
+            </a>
+            <div class="dropdown-menu" style="background-color:white;border:none;margin:none" aria-labelledby="navbarDropdown">
+              <form class="" method="post">
+                <button type="submit" style="border:none ; background-color :white" name="fr">  <a class="dropdown-item"  style="border:none; margin: none" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="https://cdn.icon-icons.com/icons2/266/PNG/512/France_29740.png" height="30" alt="fr">
+                  </a></button>
+              </form>
+              <form class=""  method="post">
+                <button type="submit" style="border:none ; background-color :white" name="en">  <a class="dropdown-item"  style="border:none ; margin: none"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" height="16" alt="en">
+                  </a> </button>
+              </form>
+
+            </div>
+          </li>
         </ul>
         </div>
 

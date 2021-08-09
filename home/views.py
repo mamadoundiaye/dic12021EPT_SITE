@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from departements.models import Etudiant
 from rest_framework import generics
 from departements.serializers import EtudiantSerializer
+from django.utils.translation import gettext_lazy, gettext
 
 
 class API_objects(generics.ListCreateAPIView):
@@ -20,13 +21,15 @@ class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
 
 def firstvisit(request):
     sign_out(request)
-    return redirect("homepage")
+    return redirect('homepage')
 
 def home(request):
     upload = ConnexionForm()
     inscription = InscriptionForm()
     if request.method == 'POST':
         inscription = InscriptionForm(request.POST, request.FILES)
+        francais =  request.POST['fr']
+        francais =  request.POST['en']
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
@@ -47,13 +50,15 @@ def home(request):
 
 def sign_out(request): #my logout view
     request.session.flush()
-    return redirect("homepage")
+    return redirect('homepage')
 
 def contacts(request): #my logout view
     upload = ConnexionForm()
     inscription = InscriptionForm()
     if request.method == 'POST':
         inscription = InscriptionForm(request.POST, request.FILES)
+        francais =  request.POST['fr']
+        francais =  request.POST['en']
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
@@ -78,6 +83,8 @@ def departement(request , dep_num): #my logout view
     inscription = InscriptionForm()
     if request.method == 'POST':
         inscription = InscriptionForm(request.POST, request.FILES)
+        francais =  request.POST['fr']
+        francais =  request.POST['en']
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
@@ -94,4 +101,4 @@ def departement(request , dep_num): #my logout view
         else:
             return HttpResponse("echec")
     else:
-        return render(request, "departement_GIT.html" , {'liste_git':liste_git , 'upload_form':upload ,'nom_departement':dep_num })
+        return render(request, "departement.html" , {'liste_git':liste_git , 'upload_form':upload ,'nom_departement':dep_num })

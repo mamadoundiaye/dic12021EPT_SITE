@@ -3,6 +3,8 @@ from . import views
 from rest_framework.urlpatterns import format_suffix_patterns
 
 
+app_name = 'home'
+
 urlpatterns = [
 #path('', views.home, name = 'home'),
 path('', views.firstvisit, name = ''),

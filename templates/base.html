@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -30,12 +31,12 @@
             <div class="mr-3">
 
             <div class="col-md-5" style="color : white">
-              <p style="color : white ; font-size : 300% ; font-weight:bold">Sagesse-Devoir</p>
+              <p style="color : white ; font-size : 300% ; font-weight:bold">{% blocktranslate %}Sagesse Devoir{% endblocktranslate %}</p>
               <p style="color : white ; font-size : 125%">
-              L'Ecole Polytechnique de Thies connu sous le sigle EPT est
+              {% blocktranslate %}L'Ecole Polytechnique de Thies connu sous le sigle EPT est
               une grande ecole d'ingenieurs implantée au Senegal .Cree en 1973 par
               Leopold Sedar Senghor , elle forme des ingenieurs dans les domaines du genie civil de l'electromecanique(avec filiere aeronautique)
-              et du genie informatique et telecommunications
+              et du genie informatique et telecommunications{% endblocktranslate %}
               </p>
             </div>
           </div>

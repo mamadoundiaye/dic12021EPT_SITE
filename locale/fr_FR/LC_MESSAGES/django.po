@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-09 09:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\dic12021\settings.py:135
+msgid "French"
+msgstr "bonjour"
+
+#: .\dic12021\settings.py:136
+msgid "English"
+msgstr "hello"
+
+#: .\dic12021\settings.py:137
+msgid "Italian"
+msgstr "hello"
+
+#: .\templates\base.html:34
+msgid "Sagesse Devoir"
+msgstr "Wisdom Duty"
+
+#: .\templates\base.html:36
+msgid ""
+"L'Ecole Polytechnique de Thies connu sous le sigle EPT est\n"
+"              une grande ecole d'ingenieurs implantée au Senegal .Cree en "
+"1973 par\n"
+"              Leopold Sedar Senghor , elle forme des ingenieurs dans les "
+"domaines du genie civil de l'electromecanique(avec filiere aeronautique)\n"
+"              et du genie informatique et telecommunications"
+msgstr "thies polytechnique school is a good school from thies"
