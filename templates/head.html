@@ -82,14 +82,13 @@
             <div class="dropdown-menu" style="background-color:white;border:none;margin:none" aria-labelledby="navbarDropdown">
               
               <form class="" method="post">
-                <button type="submit" style="border:none ; background-color :white" name="fr">  <a class="dropdown-item"  style="border:none; margin: none" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="https://cdn.icon-icons.com/icons2/266/PNG/512/France_29740.png" height="30" alt="fr">
-                  </a></button>
+                {% csrf_token %}
+                <input type="submit"  style="border:none ; background-color :white" value="fr" name="langue">  
+                   </input>
               </form>
               <form class=""  method="post">
-                <button type="submit" style="border:none ; background-color :white" name="en">  <a class="dropdown-item"  style="border:none ; margin: none"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" height="16" alt="en">
-                  </a> </button>
+                {% csrf_token %}
+                <input type="submit" style="border:none ; background-color :white" value="en" name="langue"> </input>
               </form>
 
             </div>

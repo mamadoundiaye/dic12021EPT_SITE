@@ -131,10 +131,6 @@ USE_TZ = True
 
 gettext = lambda x: x
 
-LANGUAGES = (
-   ('fr', gettext('French')),
-   ('en', gettext('English')),
-)
 
 import os
 SITE_ROOT = os.path.dirname(os.path.realpath(__name__))
