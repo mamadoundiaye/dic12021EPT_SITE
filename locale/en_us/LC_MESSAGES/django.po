@@ -86,7 +86,7 @@ msgstr "The list of students in"
 
 #: .\templates\departement.html:43
 msgid " toute classe confondues"
-msgstr "all classes combined"
+msgstr " all classes combined"
 
 #: .\templates\departement.html:46
 msgid "prenom"

@@ -66,7 +66,7 @@ def contacts(request):
     inscription = InscriptionForm()
     if request.method == 'POST' :
         if len(request.POST) == 2 :
-            response = HttpResponseRedirect('/home')
+            response = HttpResponseRedirect('/contacts')
             response.set_cookie('django_language', request.POST['langue'])
             return response
         elif len(request.POST) == 3:
@@ -98,7 +98,7 @@ def departement(request , dep_num): #my logout view
     inscription = InscriptionForm()
     if request.method == 'POST' :
         if len(request.POST) == 2 :
-            response = HttpResponseRedirect('/home')
+            response = HttpResponseRedirect('/departement/GIT')
             response.set_cookie('django_language', request.POST['langue'])
             return response
         elif len(request.POST) == 3:
