@@ -73,10 +73,12 @@ def contacts(request): #my logout view
         else :
             inscription = InscriptionForm(request.POST, request.FILES)
             if inscription.is_valid() :
-                inscription.save()
-                return HttpResponse("reussite")
+                user = inscription.save()
+                user.set_password(request.POST['password'])
+                user.save()
+                return redirect(request.path_info)
             else:
-                return HttpResponse("echec")
+                return HttpResponse("""une erreur est survenu : username deja utilise ou mdp ne correspondant pas  recharger la page ? <a href = "">reload</a>""")
     else:
             return render(request, "contacts.html" , {'upload_form':upload , 'inscription':inscription})
 
@@ -99,9 +101,11 @@ def departement(request , dep_num): #my logout view
         else :
             inscription = InscriptionForm(request.POST, request.FILES)
             if inscription.is_valid() :
-                inscription.save()
-                return HttpResponse("reussite")
+                user = inscription.save()
+                user.set_password(request.POST['password'])
+                user.save()
+                return redirect(request.path_info)
             else:
-                return HttpResponse("echec")
+                return HttpResponse("""une erreur est survenu : username deja utilise ou mdp ne correspondant pas  recharger la page ? <a href = "">reload</a>""")
     else:
         return render(request, "departement.html" , {'liste_git':liste_git , 'upload_form':upload ,'nom_departement':dep_num , 'inscription':inscription})
