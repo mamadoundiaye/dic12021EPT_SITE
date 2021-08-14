@@ -129,7 +129,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-gettext = lambda x: x
+
+LANGUAGES = (
+    ('fr', ('French')),
+    ('en', ('English')),  # (Optional)
+)
 
 
 import os
