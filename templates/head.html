@@ -56,7 +56,7 @@
 
 
         <ul class="nav col-12 col-md-auto   mb-2 justify-content-center mb-md-0">
-          <li><a href="home" id="accueil" class="nav-link px-2 link-secondary">{% blocktranslate %}Accueil{% endblocktranslate %}</a></li>
+          <li><a href="/home" id="accueil" class="nav-link px-2 link-secondary">{% blocktranslate %}Accueil{% endblocktranslate %}</a></li>
           <li>
             <a class="nav-link dropdown-toggle" id="departements"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Departements
@@ -99,11 +99,11 @@
         <div class="col-lg-4 col-md-12 text-right text-end">
           {% if request.user.is_authenticated %}
           <button  style="background-color : white; border:none ;color:rgb(225,145,50);"  data-toggle="modal"class=" disabled   ml-5 mr-2">{% blocktranslate %}Bienvenue{% endblocktranslate %} {{request.user.username}} </button>
-          <button type="button"  data-toggle="modal" class="btn btn-outline-warning"><a href="/logout" style="text-decoration:none ; color:black ">Deconnexion</a></button>
+          <button type="button"  data-toggle="modal" class="btn btn-outline-warning"><a href="/logout" style="text-decoration:none ; color:black ">{% blocktranslate %}Deconnexion{% endblocktranslate %}</a></button>
 
           {% else %}
           <button type="button" style="background-color : rgb(225,145,50)  ;color:white;" href="#myModal" data-toggle="modal"class="btn trigger-btn  btn-warning ml-5 mr-2">{% blocktranslate %}Connexion{% endblocktranslate %}</button>
-          <button type="button" href="#myModal2" data-toggle="modal" class="btn btn-outline-warning">Inscription</button>
+          <button type="button" href="#myModal2" data-toggle="modal" class="btn btn-outline-warning">{% blocktranslate %}Inscription{% endblocktranslate %}</button>
           {% endif %}
         </div>
 
