@@ -1,3 +1,4 @@
+{% load i18n %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,7 @@ body {
 			<form  method="post" enctype="multipart/form-data">
         {% csrf_token %}
 				<div class="modal-header">
-					<h4 class="modal-title">Connexion</h4>
+					<h4 class="modal-title">{% blocktranslate %}Connexion{% endblocktranslate %}</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
@@ -35,13 +36,13 @@ body {
 					<div class="form-group" style="border-color: rgb(225,145,50)">
             <input type="password" required placeholder="mot-de-pass" style="border-color: rgb(225,145,50)" name="password" value="">
             <br><br>
-            <label class="form-check-label" ><input type="checkbox"> Se souvenir de moi</label>
+            <label class="form-check-label" ><input type="checkbox">{% blocktranslate %} Se souvenir de moi{% endblocktranslate %}</label>
 
 					</div>
 				</div>
 				<div class="modal-footer justify-content-between">
             <input type="submit" class="btn  " style="color : white ; background-color:rgb(225,145,50)" value="Login">
-            <a href="#" class="float-right text-muted" ><small style="color : rgb(225,145,50);">Mot de pass oublié ?</small></a>
+            <a href="#" class="float-right text-muted" ><small style="color : rgb(225,145,50);">{% blocktranslate %}Mot de pass oublié ?{% endblocktranslate %}</small></a>
 
         </div>
 

@@ -56,25 +56,25 @@
 
 
         <ul class="nav col-12 col-md-auto   mb-2 justify-content-center mb-md-0">
-          <li><a href="home" id="accueil" class="nav-link px-2 link-secondary">Accueil</a></li>
+          <li><a href="home" id="accueil" class="nav-link px-2 link-secondary">{% blocktranslate %}Accueil{% endblocktranslate %}</a></li>
           <li>
             <a class="nav-link dropdown-toggle" id="departements"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Departements
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" style="text-decoration:none " href="/departement/GIT">Genie Informatique-Telecoms</a>
+              <a class="dropdown-item" style="text-decoration:none " href="/departement/GIT">{% blocktranslate %}Genie Informatique-Telecoms{% endblocktranslate %}</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" style="text-decoration:none" href="/departement/GC">Genie Civil</a>
+              <a class="dropdown-item" style="text-decoration:none" href="/departement/GC">{% blocktranslate %}Genie Civil{% endblocktranslate %}</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" style="text-decoration:none" href="/departement/GEM">Genie Electromecanique</a>
+              <a class="dropdown-item" style="text-decoration:none" href="/departement/GEM">{% blocktranslate %}Genie Electromecanique{% endblocktranslate %}</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" style="text-decoration:none" href="/departement/AERO">Genie Aeronautique</a>
+              <a class="dropdown-item" style="text-decoration:none" href="/departement/AERO">{% blocktranslate %}Genie Aeronautique{% endblocktranslate %}</a>
 
             </div>
           </li>
-          <li><a href="/admin" id="administration" class="nav-link px-2 link-dark">Administration</a></li>
-          <li><a href="/contacts" id="contacts"  class="nav-link px-2 link-dark">Contacts</a></li>
-          <li><a href="#" id="a propos"  class="nav-link px-2 link-dark">A propos</a></li>
+          <li><a href="/admin" id="administration" class="nav-link px-2 link-dark">{% blocktranslate %}Administration{% endblocktranslate %}</a></li>
+          <li><a href="/contacts" id="contacts"  class="nav-link px-2 link-dark">{% blocktranslate %}Contacts{% endblocktranslate %}</a></li>
+          <li><a href="#" id="a propos"  class="nav-link px-2 link-dark">{% blocktranslate %}A propos{% endblocktranslate %}</a></li>
           <li>
             <a class="nav-link dropdown-toggle border-left border-right border-warning" id="departements"  href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <img src="https://cdn.icon-icons.com/icons2/1222/PNG/512/1492616968-18-google-translate-text-language-translation_83413.png" height="30" alt="langue">
@@ -98,11 +98,11 @@
 
         <div class="col-lg-4 col-md-12 text-right text-end">
           {% if request.user.is_authenticated %}
-          <button  style="background-color : white; border:none ;color:rgb(225,145,50);"  data-toggle="modal"class=" disabled   ml-5 mr-2">Bienvenue {{request.user.username}} </button>
+          <button  style="background-color : white; border:none ;color:rgb(225,145,50);"  data-toggle="modal"class=" disabled   ml-5 mr-2">{% blocktranslate %}Bienvenue{% endblocktranslate %} {{request.user.username}} </button>
           <button type="button"  data-toggle="modal" class="btn btn-outline-warning"><a href="/logout" style="text-decoration:none ; color:black ">Deconnexion</a></button>
 
           {% else %}
-          <button type="button" style="background-color : rgb(225,145,50)  ;color:white;" href="#myModal" data-toggle="modal"class="btn trigger-btn  btn-warning ml-5 mr-2">Connexion</button>
+          <button type="button" style="background-color : rgb(225,145,50)  ;color:white;" href="#myModal" data-toggle="modal"class="btn trigger-btn  btn-warning ml-5 mr-2">{% blocktranslate %}Connexion{% endblocktranslate %}</button>
           <button type="button" href="#myModal2" data-toggle="modal" class="btn btn-outline-warning">Inscription</button>
           {% endif %}
         </div>

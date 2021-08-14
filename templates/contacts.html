@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,18 +21,18 @@
         </header>
               <!-- Links -->
 
-              <h5 class=" col-12 text-uppercase mt-2" style="height:2em ; color:white ; background-color:rgb(225,145,50);">Contacts</h5>
+              <h5 class=" col-12 text-uppercase mt-2" style="height:2em ; color:white ; background-color:rgb(225,145,50);">{% blocktranslate %}Contacts{% endblocktranslate %}</h5>
               <br>
               <div class="col-12">
               <ul class="list-unstyled ">
                 <li>
-                  <a style="text-decoration:none; color: black ;font-weight :normal;  ;" href="#!">Mail : ept@ept.sn</a>
+                  <a style="text-decoration:none; color: black ;font-weight :normal;  ;" href="#!">{% blocktranslate %}Mail{% endblocktranslate %} : ept@ept.sn</a>
                 </li>
                 <li>
-                  <a style="text-decoration:none; color: black ;font-weight :normal  ;" href="#!">Postal : BP A10, Thies, Senegal</a>
+                  <a style="text-decoration:none; color: black ;font-weight :normal  ;" href="#!">{% blocktranslate %}Postal{% endblocktranslate %} : BP A10, Thies, Senegal</a>
                 </li>
                 <li>
-                  <a style="text-decoration:none; color: black ;font-weight :normal  ;" href="#!">Telephone : 00221 33 951 15 48</a>
+                  <a style="text-decoration:none; color: black ;font-weight :normal  ;" href="#!">{% blocktranslate %}Telephone{% endblocktranslate %} : 00221 33 951 15 48</a>
                 </li>
                 <li>
                   <a style="text-decoration:none; color: black ;font-weight :normal  ;" href="#!">Fax : 00221 33 951 14 76</a>
@@ -44,34 +45,34 @@
                 <div class="col-12">
                 <ul class="list-unstyled ">
                   <li>
-                    <p style="text-decoration:none; color: black ;font-weight :normal;  ;" href="#!">l'EPT est situee dans la region de Thies (environ 70km de Dakar , Senegal ),
+                    <p style="text-decoration:none; color: black ;font-weight :normal;  ;" href="#!">{% blocktranslate %}l'EPT est situee dans la region de Thies (environ 70km de Dakar , Senegal ),
                        sur un terrain de plus de 400 hectares . Son Campus comporte des locaux d'enseignement pedagogiques et de recherche , d'administration , d'exploitation , et d'hebergement a l'usage des etudiants
-                        et d'une partie du personnel
+                        et d'une partie du personnel{% endblocktranslate %}
                     </p>
                   </li>
                 </ul>
                   </div>
                   <br>
-                  <h5 class=" col-12 text-uppercase" style="height:2em ;color:white ; background-color:rgb(225,145,50);">Localisation</h5>
+                  <h5 class=" col-12 text-uppercase" style="height:2em ;color:white ; background-color:rgb(225,145,50);">{% blocktranslate %}Localisation{% endblocktranslate %}</h5>
                 <div class="container" style="border:none">
                   <div class="row">
 
 
                 <div class="mapouter col-8">
                   <div class="gmap_canvas">
-                    <p>iteneraire EPT dans une vue de plan grace a google maps API     ......</p>
+                    <p>{% blocktranslate %}iteneraire EPT dans une vue de plan grace a google maps API{% endblocktranslate %}     ......</p>
                     <iframe width="500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=EPT%20thies&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                     <a href="https://2piratebay.org"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:500px;}</style><a href="https://www.embedgooglemap.net">how to embed google maps into html</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:500px;}</style>
 
                   </div>
                 </div>
                 <div class="col-4">
-                  <p>trouver directement votre itineraire depuis votre adresse jusqu'a l'EPT</p>
+                  <p>{% blocktranslate %}trouver directement votre itineraire depuis votre adresse jusqu'a l'EPT{% endblocktranslate %}</p>
                   <input type="text" placeholder="depart" name="s" id="s"   placeholder="Enter Adress"  data-role="none">
                   <br><br>
                   <input type="text" name="s" id="s" placeholder="BP"  placeholder="Enter Adress"  data-role="none">
                   <br><br>
-                  <button type="submit" style="color:white ; background-color:rgb(225,145,50)" name="button">Rechercher</button>
+                  <button type="submit" style="color:white ; background-color:rgb(225,145,50)" name="button">{% blocktranslate %}Rechercher{% endblocktranslate %}</button>
                 </div>
                 </div>
               </div>

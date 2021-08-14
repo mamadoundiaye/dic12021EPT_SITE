@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,18 +36,18 @@
         </header>
 
         <div style="background-color:rgb(225,145,50); height:2em">
-          <h2 style="color:white">BIENVENUE au departement {{ nom_departement }}</h2>
+          <h2 style="color:white">{% blocktranslate %}BIENVENUE au departement{% endblocktranslate %} {{ nom_departement }}</h2>
         </div>
         <div class="">
           {% if request.user.is_authenticated %}
-          <h2>La liste des eleves en {{ nom_departement }} toute classe confondues</h2>
+          <h2>{% blocktranslate %}La liste des eleves en{% endblocktranslate %} {{ nom_departement }}{% blocktranslate %} toute classe confondues{% endblocktranslate %}</h2>
             <table>
             <tr>
-            <th>prenom </th>
-            <th>nom</th>
-            <th>email</th>
-            <th>classe</th>
-            <th>date de naissance</th>
+            <th>{% blocktranslate %}prenom{% endblocktranslate %} </th>
+            <th>{% blocktranslate %}nom{% endblocktranslate %}</th>
+            <th>{% blocktranslate %}email{% endblocktranslate %}</th>
+            <th>{% blocktranslate %}classe{% endblocktranslate %}</th>
+            <th>{% blocktranslate %}date de naissance{% endblocktranslate %}</th>
             </tr>
 
           {% for git in liste_git %}

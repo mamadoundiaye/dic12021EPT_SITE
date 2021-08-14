@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -30,25 +31,25 @@ body {
             <div class="container " style="border:none">
               <div class="row">
                 <div class="col-4">
-                  <label>username et nom</label><br>
+                  <label>{% blocktranslate %}username et nom{% endblocktranslate %}</label><br>
       						{{inscription.username }}<br><br>
                   {{inscription.last_name }}<br><br><br>
-                  <label>Addresse mail</label><br>
+                  <label>{% blocktranslate %}Addresse mail{% endblocktranslate %}</label><br>
                   {{inscription.email }}<br><br>
-                  <label>Départements</label><br>
+                  <label>{% blocktranslate %}Départements{% endblocktranslate %}</label><br>
                   {{inscription.departement }}
                 </div>
                 <div class="col-4">
                   <br><br><br><br><br><br><br><br><br><br><br>
-                  <label>Classe-Niveau</label><br>
+                  <label>{% blocktranslate %}Classe-Niveau{% endblocktranslate %}</label><br>
                   {{inscription.appartient }}
                 </div>
                 <div class="col-4">
 
-                  <label>Date et lieu de naissance</label><br>
+                  <label>{% blocktranslate %}Date et lieu de naissance{% endblocktranslate %}</label><br>
                   {{inscription.date_de_naissance }}<br><br>
                   {{inscription.lieu_de_naissance }}<br><br>
-                  <label>Mot de passe et confirmation</label><br>
+                  <label>{% blocktranslate %}Mot de passe et confirmation{% endblocktranslate %}</label><br>
                   {{inscription.password }}<br><br>
                   {{inscription.password }}<br><br><br><br>
                   <br><br>
@@ -66,7 +67,7 @@ body {
 
 					</div>
 					<div class="form-group" style="border-color: rgb(225,145,50)">
-            <label class="form-check-label" ><input type="checkbox"> Se souvenir de moi <a href="#" class="float-right text-muted" ><small style="color : rgb(225,145,50);">Mot de pass oublié ?</small></a></label>
+            <label class="form-check-label" ><input type="checkbox">{% blocktranslate %} Se souvenir de moi{% endblocktranslate %} <a href="#" class="float-right text-muted" ><small style="color : rgb(225,145,50);">{% blocktranslate %}Mot de pass oublié ?{% endblocktranslate %}</small></a></label>
 
 					</div>
 				</div>

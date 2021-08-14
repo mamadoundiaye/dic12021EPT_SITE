@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
    <!-- Begin Footer -->
       <footer class="page-footer font-small pt-4 " style="background-color : rgb(225,145,50) ; color : white">
 
@@ -14,7 +15,7 @@
               <!-- Content -->
               <div class="text-center border-right">
                 <img src="{% static 'images/ept_logoHAUT.svg' %}" height = "125" class="rounded " alt="...">
-                <p class="footer-copyright ">© 2021 Copyright: ept.sn | Ecole Polytechnique de Thies </p>
+                <p class="footer-copyright ">© 2021 Copyright: ept.sn | {% blocktranslate %}Ecole Polytechnique de Thies{% endblocktranslate %} </p>
               </div>
 
 
@@ -29,17 +30,17 @@
             <div class="col-md-4 m4-md-0 mb-3  border-right">
 
               <!-- Links -->
-              <h5 class="text-uppercase">Contacts</h5>
+              <h5 class="text-uppercase">{% blocktranslate %}Contacts{% endblocktranslate %}</h5>
 
               <ul class="list-unstyled mt-4">
                 <li>
                   <a style="text-decoration:none; color: white ;font-weight :normal;  ;" href="#!">Mail : ept@ept.sn</a>
                 </li>
                 <li>
-                  <a style="text-decoration:none; color: white ;font-weight :normal  ;" href="#!">Postal : BP A10, Thies, Senegal</a>
+                  <a style="text-decoration:none; color: white ;font-weight :normal  ;" href="#!">{% blocktranslate %}Postal{% endblocktranslate %} : BP A10, Thies, Senegal</a>
                 </li>
                 <li>
-                  <a style="text-decoration:none; color: white ;font-weight :normal  ;" href="#!">Telephone : 00221 33 951 15 48</a>
+                  <a style="text-decoration:none; color: white ;font-weight :normal  ;" href="#!">{% blocktranslate %}Telephone{% endblocktranslate %} : 00221 33 951 15 48</a>
                 </li>
                 <li>
                   <a style="text-decoration:none; color: white ;font-weight :normal  ;" href="#!">Fax : 00221 33 951 14 76</a>
@@ -53,7 +54,7 @@
             <div class="col-md-4 mb-md-0 mb-3">
 
               <!-- Links -->
-              <h5 class="text-uppercase">Social</h5>
+              <h5 class="text-uppercase">{% blocktranslate %}Social{% endblocktranslate %}</h5>
 
               <ul class="list-unstyled list-group list-group-horizontal-md mt-5">
                 <li class="mr-2">

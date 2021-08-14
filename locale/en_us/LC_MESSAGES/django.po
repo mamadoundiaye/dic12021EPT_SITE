@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-14 16:51+0000\n"
+"POT-Creation-Date: 2021-08-14 17:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,4 +29,156 @@ msgid ""
 "              Leopold Sedar Senghor , elle forme des ingenieurs dans les "
 "domaines du genie civil de l'electromecanique(avec filiere aeronautique)\n"
 "              et du genie informatique et telecommunications"
-msgstr "fucking you "
+msgstr ""
+
+#: .\templates\contacts.html:24 .\templates\footer.html:33
+#: .\templates\head.html:76
+msgid "Contacts"
+msgstr ""
+
+#: .\templates\contacts.html:29
+msgid "Mail"
+msgstr ""
+
+#: .\templates\contacts.html:32 .\templates\footer.html:40
+msgid "Postal"
+msgstr ""
+
+#: .\templates\contacts.html:35 .\templates\footer.html:43
+msgid "Telephone"
+msgstr ""
+
+#: .\templates\contacts.html:48
+msgid ""
+"l'EPT est situee dans la region de Thies (environ 70km de Dakar , "
+"Senegal ),\n"
+"                       sur un terrain de plus de 400 hectares . Son Campus "
+"comporte des locaux d'enseignement pedagogiques et de recherche , "
+"d'administration , d'exploitation , et d'hebergement a l'usage des "
+"etudiants\n"
+"                        et d'une partie du personnel"
+msgstr ""
+
+#: .\templates\contacts.html:56
+msgid "Localisation"
+msgstr ""
+
+#: .\templates\contacts.html:63
+msgid "iteneraire EPT dans une vue de plan grace a google maps API"
+msgstr ""
+
+#: .\templates\contacts.html:70
+msgid "trouver directement votre itineraire depuis votre adresse jusqu'a l'EPT"
+msgstr ""
+
+#: .\templates\contacts.html:75
+msgid "Rechercher"
+msgstr ""
+
+#: .\templates\departement.html:39
+msgid "BIENVENUE au departement"
+msgstr ""
+
+#: .\templates\departement.html:43
+msgid "La liste des eleves en"
+msgstr ""
+
+#: .\templates\departement.html:43
+msgid " toute classe confondues"
+msgstr ""
+
+#: .\templates\departement.html:46
+msgid "prenom"
+msgstr ""
+
+#: .\templates\departement.html:47
+msgid "nom"
+msgstr ""
+
+#: .\templates\departement.html:48
+msgid "email"
+msgstr ""
+
+#: .\templates\departement.html:49
+msgid "classe"
+msgstr ""
+
+#: .\templates\departement.html:50
+msgid "date de naissance"
+msgstr ""
+
+#: .\templates\footer.html:18
+msgid "Ecole Polytechnique de Thies"
+msgstr ""
+
+#: .\templates\footer.html:57
+msgid "Social"
+msgstr ""
+
+#: .\templates\head.html:59
+msgid "Accueil"
+msgstr ""
+
+#: .\templates\head.html:65
+msgid "Genie Informatique-Telecoms"
+msgstr ""
+
+#: .\templates\head.html:67
+msgid "Genie Civil"
+msgstr ""
+
+#: .\templates\head.html:69
+msgid "Genie Electromecanique"
+msgstr ""
+
+#: .\templates\head.html:71
+msgid "Genie Aeronautique"
+msgstr ""
+
+#: .\templates\head.html:75
+msgid "Administration"
+msgstr ""
+
+#: .\templates\head.html:77
+msgid "A propos"
+msgstr ""
+
+#: .\templates\head.html:101
+msgid "Bienvenue"
+msgstr ""
+
+#: .\templates\head.html:105 .\templates\loginmodal.html:26
+msgid "Connexion"
+msgstr ""
+
+#: .\templates\inscriptionmodal.html:34
+msgid "username et nom"
+msgstr ""
+
+#: .\templates\inscriptionmodal.html:37
+msgid "Addresse mail"
+msgstr ""
+
+#: .\templates\inscriptionmodal.html:39
+msgid "Départements"
+msgstr ""
+
+#: .\templates\inscriptionmodal.html:44
+msgid "Classe-Niveau"
+msgstr ""
+
+#: .\templates\inscriptionmodal.html:49
+msgid "Date et lieu de naissance"
+msgstr ""
+
+#: .\templates\inscriptionmodal.html:52
+msgid "Mot de passe et confirmation"
+msgstr ""
+
+#: .\templates\inscriptionmodal.html:70 .\templates\loginmodal.html:39
+msgid " Se souvenir de moi"
+msgstr ""
+
+#: .\templates\inscriptionmodal.html:70 .\templates\loginmodal.html:45
+msgid "Mot de pass oublié ?"
+msgstr ""
