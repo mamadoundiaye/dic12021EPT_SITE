@@ -30,11 +30,11 @@ body {
             <div class="container " style="border:none">
               <div class="row">
                 <div class="col-4">
-                  <label>Prenom et nom</label><br>
-      						{{inscription.prenom }}<br><br>
-                  {{inscription.nom }}<br><br><br>
+                  <label>username et nom</label><br>
+      						{{inscription.username }}<br><br>
+                  {{inscription.last_name }}<br><br><br>
                   <label>Addresse mail</label><br>
-                  {{inscription.mail }}<br><br>
+                  {{inscription.email }}<br><br>
                   <label>Départements</label><br>
                   {{inscription.departement }}
                 </div>
@@ -47,7 +47,11 @@ body {
 
                   <label>Date et lieu de naissance</label><br>
                   {{inscription.date_de_naissance }}<br><br>
-                  {{inscription.lieu_de_naissance }}<br><br><br><br>
+                  {{inscription.lieu_de_naissance }}<br><br>
+                  <label>Mot de passe et confirmation</label><br>
+                  {{inscription.password }}<br><br>
+                  {{inscription.password }}<br><br><br><br>
+                  <br><br>
                   <label>Captcha</label><br>
                   <img src="{% static 'images/captcha.png' %}" height="40" alt="captcha">
                   <br><br>

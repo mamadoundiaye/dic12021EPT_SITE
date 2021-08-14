@@ -21,6 +21,7 @@ class ProfesseurA(admin.ModelAdmin):
 class MatiereA(admin.ModelAdmin):
     list_display = ('nom_matiere', 'code_matiere' , 'enseigner_par' ,'enseigner_dans')
 
+
 # Register your models here.
 from .models import*
 admin.site.register(Etudiant , EtudiantA)
@@ -29,6 +30,7 @@ admin.site.register(Departement)
 admin.site.register(Classe)
 admin.site.register(UE_matiere)
 admin.site.register(Matiere , MatiereA)
+admin.site.register(UserExtension)
 
 #unregister Group , User , Theme
 admin.site.unregister(Group)

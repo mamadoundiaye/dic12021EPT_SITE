@@ -134,3 +134,13 @@ class UE_matiere(models.Model):
 
     def credit_UE(self, ):
         pass
+
+class UserExtension(User):
+    
+    date_de_naissance = models.DateField(null=True)
+    lieu_de_naissance = models.CharField(max_length = 200)
+
+
+    appartient = models.ManyToManyField('Classe')
+    departement = models.ManyToManyField('Departement',default='GIT')
+    

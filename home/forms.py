@@ -1,8 +1,7 @@
 from django import forms
-
 #from departements.models import Departement
-from django.contrib.auth.models import User
-from departements.models import Utilisateur
+
+from departements.models import UserExtension
 from departements.models import Etudiant
 #EPT SITE ici on gere les formulaire
 
@@ -10,7 +9,7 @@ from departements.models import Etudiant
 class ConnexionForm(forms.ModelForm):
 
     class Meta:
-        model = User
+        model = UserExtension
         fields = ['username', 'password']
 
 
@@ -18,5 +17,8 @@ class ConnexionForm(forms.ModelForm):
 class InscriptionForm(forms.ModelForm):
     class Meta:
 
-        model = Etudiant
-        fields = ['prenom', 'nom','mail','departement','appartient','date_de_naissance','lieu_de_naissance']
+        model = UserExtension
+        fields = ['username', 'last_name','email','password','password','departement' ,'appartient','date_de_naissance','lieu_de_naissance']
+        widgets = {
+            'password' : forms.PasswordInput ,
+        }
